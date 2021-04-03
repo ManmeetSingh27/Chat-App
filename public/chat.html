@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="23.png">
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla&family=Montserrat:wght@900&family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/9e4922904d.js" crossorigin="anonymous"></script>
+
     <title>Chat App</title>
 </head>
 <body>
@@ -16,19 +24,22 @@
         </div>
         <div class="chat__main">
             <div id="messages" class="chat__messages"></div>
-
+            <!-- <i class="fas fa-map-marker-alt"></i> -->
             
 
             <div  class="compose">
-
+                <button class="locbtn" id = "send-location"><i class="fas fa-map-marked-alt fa-lg"></i>
+                    <span class="loctext">Send Location</span>
+                </button>
                  <form id = "message-form">
-                    <input name="message" placeholder="Type message here!" required auto>
-                    <button>Send</button>
+                    <input class="inputspace" name="message" autocomplete="off" placeholder="Type message here!" required auto>
+                    <button class="sendbtn"><i class="fas fa-paper-plane  fa-lg"></i></button>
                 </form>
-            <button id = "send-location">Send location</button>
+            
             </div>
         </div>
     </div>
+    
 
     ChatApp
 
@@ -37,10 +48,10 @@
     <script id="message-templates" type="text/html">
         <div class="message">
             <p>
-                <span class="message__name">{{username}}</span>
+                <span class="message__name"><i class="fas fa-user"></i> {{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
             </p>
-            <p>{{message}}</p>
+            <p class="para-d">{{message}}</p>
         </div>
     </script>
 
@@ -50,13 +61,13 @@
                 <span class="message__name">{{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
             </p>
-            <p> <a href="{{url}}" target= "_blank">My current Location</a></p>
+            <button class="locate"><p> <a href="{{url}}" target= "_blank">My current Location</a></p></button>
         </div>
     </script>
 
     <script id = "sidebar-template" type = "text/html">
-        <h2 class="room-title">{{room}}</h2>
-        <h3 class = "list-title">Users</h3>
+        <h2 class="room-title">Room : {{room}}</h2>
+        <h3 class = "list-title">Active Users  <i class="fas fa-users"></i></h3>
         <ul class="users"> 
            {{#users}}
                 <li>{{username}}</li>

@@ -28,7 +28,7 @@ label {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
-    color: #777;
+    color: #1e212d;
 }
 
 input {
@@ -40,7 +40,7 @@ input {
 button {
     cursor: pointer;
     padding: 12px;
-    background: #7C5CBF;
+    background: #3a6351;
     border: none;
     color: white;
     font-size: 16px;
@@ -48,12 +48,12 @@ button {
 }
 
 button:hover {
-    background: #6b47b8;
+    background: #1f441e;
 }
 
 button:disabled {
     cursor: default;
-    background: #7c5cbf94;
+    background: #3a6351;
 }
 
 /* Join Page Styles */
@@ -65,11 +65,13 @@ button:disabled {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("5.jpg");
+    background-size: cover;
 }
 
 .centered-form__box {
     box-shadow: 0px 0px 17px 1px #1D1F26;
-    background: #F7F7FA;
+    background: #dddddd;
     padding: 24px;
     width: 250px;
 }
@@ -104,6 +106,7 @@ button:disabled {
     display: flex;
     flex-direction: column;
     max-height: 100vh;
+    background-image: url("backg.png");
 }
 
 .chat__messages {
@@ -122,15 +125,25 @@ button:disabled {
     font-weight: 600;
     font-size: 14px;
     margin-right: 8px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 15px;
 }
 
 .message__meta {
     color: #777;
     font-size: 14px;
+    
+    
+}
+.para-d {
+    font-family: 'Karla', sans-serif;
 }
 
 .message a {
-    color: #0070CC;
+    color: #282d2e;
+    font-family: 'Karla', sans-serif;
+    
 }
 
 /* Message Composition Styles */
@@ -158,6 +171,7 @@ button:disabled {
 
 .compose button {
     font-size: 14px;
+    margin: 0 16px 0 0;
 }
 
 /* Chat Sidebar Styles */
@@ -167,6 +181,10 @@ button:disabled {
     font-size: 22px;
     background: #2c2f3a;
     padding: 24px;   
+    font-family: 'Poiret One';
+    letter-spacing: 0.1em;
+    font-weight: bolder;
+    font-size: 35px;
 }
 
 .list-title {
@@ -174,10 +192,88 @@ button:disabled {
     font-size: 18px;
     margin-bottom: 4px;
     padding: 12px 24px 0 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
 }
 
 .users {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+    font-family: 'Yantramanav', sans-serif;
+    
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: green; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: 0em; /* Also needed for space (tweak if needed) */
+}
+
+.inputspace {
+    height: 45px;
+    border-radius: 25px;
+}
+
+.sendbtn {
+    height: 45px;
+    width: 45px;
+    border-radius: 20px;
+}
+
+.locbtn {
+    height: 45px;
+    width: 45px;
+    border-radius: 20px;
+}
+
+.locbtn .loctext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    
+    z-index: 1;
+  }
+
+  .locbtn:hover .loctext {
+    visibility: visible;
+  }
+
+  .indexinput {
+    height: 45px;
+    border-radius: 25px;
+  }
+
+  .indexbtn {
+    height: 45px;
+    border-radius: 25px;
+    background-color: #3a6351;
+    color: #dddddd;
+  }
+
+  .locate {
+      margin-top: 5px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #7eca9c;
+    text-align: center;
+    padding-top: 7px;
+  }
+  
+  .locate:hover {
+    background: #ccffbd;
 }
